@@ -1,0 +1,279 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.grid-container {
+	background-color: #eee;
+	max-width: 2000px;
+	padding: 0px;
+}
+
+.section_one {
+    padding: 2rem;
+	margin-bottom: 0px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.section_one_headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 50%;
+    padding: 1rem;
+}
+
+.headline {
+	margin-top: 30px;
+}
+
+.first_section_img {
+    display: inline-block;
+    width: 110px;
+}
+
+.section_donate {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: white;
+}
+
+.donate_img {
+	width: 201px;;
+}
+
+.bank_details {
+	margin-top: 30px;
+	font-size: 1.2rem;
+	background-color: white;
+}
+
+.ul_bank_details {
+	padding-left: 10px;
+	font-size: 1.2rem;
+}
+
+.section_donate_headline {
+    font-size: 1.5rem;
+    font-weight: 600;
+	padding: 10px;
+}
+
+.donate_subheadline {
+	margin-top: 50px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	padding-left: 10px;
+}
+
+.bank_font {
+	font-size: 1.2rem;
+	color: #e18919;
+}
+
+.section_names {
+    margin-top: 100px;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+
+.thank_you_headline {
+	font-size: 2rem;
+	font-weight: 600;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.thank_you_img {
+	width: 103px;
+}
+
+.ul_names {
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+}
+
+.section_social_share {
+	padding: 50px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	background: white;
+
+}
+
+.social_img {
+	margin-left: 20px;
+}
+
+/* mobile */
+
+/* medium */
+
+@media screen and (min-width: 737px) and (max-width: 1200px) {
+    .section_one {
+        font-size: 1.3rem;
+    }
+
+    .section_one_headline {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .section_names {
+        margin: 20px;
+        font-size: 1rem;
+        margin-top: 50px;
+    }
+
+    .first_section_img {
+        display: inline-block;
+        width: 80px;
+    }
+
+	.section_donate_headline {
+	    font-size: 1.3rem;
+	    font-weight: 600;
+	}
+
+	.donate_img {
+		width: 171px;
+	}
+
+	.bank_details {
+		margin-top: 30px;
+		font-size: 1.1rem;
+		line-height: 1;
+	}
+
+	.donate_subheadline {
+		margin-top: 50px;
+		font-size: 1.1rem;
+		font-weight: 600;
+	}
+
+	.bank_font {
+		font-size: 1.1rem;
+		color: #e18919;
+	}
+
+	.ul_bank_details {
+		padding-left: 10px;
+		font-size: 1.1rem;
+	}
+
+	.thank_you_img {
+		width: 93px;
+	}
+
+	.thank_you_headline {
+		font-size: 1.5rem;
+		font-weight: 600;
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+
+	.ul_names {
+	    columns: 3;
+	    -webkit-columns: 3;
+	    -moz-columns: 3;
+	}
+
+	.section_social_share {
+		padding: 50px;
+		font-size: 1.5rem;
+		font-weight: 600;
+		background: white;
+
+	}
+
+	.social_img {
+		margin-left: 20px;
+	}
+
+}
+
+/* small */
+
+@media screen and (max-width: 736px) {
+    .section_one {
+        font-size: 1rem;
+    }
+
+    .section_one_headline {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .section_names {
+        margin: 20px;
+        font-size: 1rem;
+    }
+
+    .first_section_img {
+        display: inline-block;
+        width: 70px;
+    }
+
+	.section_donate_headline {
+	    font-size: 1.1rem;
+	    font-weight: 600;
+	}
+
+	.donate_subheadline {
+		margin-top: 50px;
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	.bank_font {
+		font-size: 1rem;
+		color: #e18919;
+	}
+
+	.ul_bank_details {
+		padding-left: 10px;
+		font-size: 1rem;
+	}
+
+	.donate_img {
+		width: 131px;
+	}
+
+    .ul_names {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+
+	.bank_details {
+		margin-top: 30px;
+		font-size: 1rem;
+	}
+
+	.thank_you_img {
+		width: 73px;
+	}
+
+	.thank_you_headline {
+		font-size: 1.5rem;
+		font-weight: 600;
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+
+	.section_social_share {
+		padding: 50px;
+		font-size: 1.5rem;
+		font-weight: 600;
+		background: white;
+
+	}
+
+	.social_img {
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+
+}
