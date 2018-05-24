@@ -1,7 +1,9 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
 from names_api.models import Person
-from .create_database import create_default_database
+from .create_database import fill_database
+from rest_framework.generics import ListAPIView, RetrieveAPIView
+from names_api.serializers import NamesSerializer
 
 # Create your views here.
 
@@ -11,7 +13,7 @@ class CreateNamesInDatabase(View):
 
         # create default database if not created yet
         if not list_of_person_objects:
-            create_default_database()
+            fill_database()
 
         ctx = {
             'list_of_person_objects': list_of_person_objects,
@@ -21,3 +23,13 @@ class CreateNamesInDatabase(View):
 
     def post(self, request):
         pass
+
+
+class NamesListAPIView(ListAPIView) :
+    queryset = Person.objects.all()
+    serializer_class = NamesSerializer
+
+
+class PersonDetailAPIView(RetrieveAPIView):
+    queryset = Person.objects.all()
+    serializer_class = NamesSerializer

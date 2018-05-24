@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from names_api.views import CreateNamesInDatabase
+from names_api.views import CreateNamesInDatabase, NamesListAPIView, PersonDetailAPIView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^create_names/$', CreateNamesInDatabase.as_view())
+    url(r'^names_list/$', NamesListAPIView.as_view(), name='names-list'),
+    url(r'^names_list/(?P<pk>\d+)/$', PersonDetailAPIView.as_view(), name='detail-view'),
+    url(r'^create_names/$', CreateNamesInDatabase.as_view(), name='create-names'),
 ]

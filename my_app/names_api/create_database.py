@@ -1,7 +1,7 @@
 import os
 from names_api.models import Person
 
-def create_default_database():
+def fill_database():
     file_with_names = open(os.path.dirname(os.path.realpath(__file__)) + '/names.txt', "r")
     names_dict = {}
 
