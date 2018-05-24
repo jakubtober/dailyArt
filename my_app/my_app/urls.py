@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from names_api.views import CreateNamesInDatabase
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^create_names/$', CreateNamesInDatabase.as_view())
 ]

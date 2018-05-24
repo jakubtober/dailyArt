@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+
+{% for person_object in list_of_person_objects %}
+<p>{{ person_object.name }} {{ person_object.last_name }}<p>
+{% endfor %}
+
+{% endblock %}
