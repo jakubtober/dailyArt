@@ -50,7 +50,6 @@
                            <img src="img/ico_1.png" class="thank_you_img">
                            <p class="thank_you_headline">Huge Thank You!</p>
                            <ul class="ul_names no-bullet">
-                               <!-- Put names in <li></li> tags here -->
                            </ul>
                        </div>
                      </div>
@@ -59,20 +58,6 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
-
-    <script>
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: 'http://127.0.0.1:8000/names_list/',
-    }).done(function(data) {
-        for (i=0; i<data.length; i++) {
-            var newListItem = $("<li></li>").text(data[i].name + " " + data[i].last_name);
-            $(".ul_names").append(newListItem);
-        }
-    }).fail(function(){
-        $(".ul_names").append("<li>Sorry we couldn't load files from server...</li>");
-    });
-    </script>
+    <script src="js/my_ajax.js"></script>
   </body>
 </html>

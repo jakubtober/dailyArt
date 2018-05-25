@@ -1,10 +1,56 @@
-{% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Home{% endblock %}
-{% block content %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyArt Supporters</title>
+    <link rel="shortcut icon" type="image/png" href="{% static "names_api/img/logo-icon.png" %} "/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Work+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "names_api/css/foundation.css" %}">
+    <link rel="stylesheet" href="{% static "names_api/css/app.css" %}">
+  </head>
+  <body>
 
-{% for person_object in list_of_person_objects %}
-<p>{{ person_object.name }} {{ person_object.last_name }}<p>
-{% endfor %}
+    <div class="grid-container">
+         <div class="section_one">
+                    <div class="grid-x grid-margin-x text-center">
+                        <div class="cell large-6 large-offset-3 section_one_headline">
+                            <img class="first_section_img float-center" src="{% static "names_api/img/logo-icon.png" %}">
+                            <p class="headline">Add new people below:</p>
+                        </div>
+                    </div>
+                    <div class="grid-x grid-margin-x grid-padding-x text-center">
+                        <div class="cell large-10 medium-10 small-10 large-offset-1 medium-offset-1 small-offset-1">
+                        </div>
+                    </div>
+        </div>
 
-{% endblock %}
+        <div class="section_donate">
+                   <div class="grid-x grid-margin-x text-center">
+                           <div class="cell medium-3 large-3"></div>
+                           <div class="cell medium-3 large-3"><textarea placeholder="Names:" rows=5></textarea></div>
+                           <div class="cell medium-3 large-3"><textarea placeholder="Last Names" rows=5></textarea></div>
+                           <div class="cell medium-2 large-2"><input class="button primary" type="submit" value="Add new names"></div>
+                   </div>
+
+        </div>
+
+        <div class="section_names">
+                   <div class="grid-x grid-margin-x grid-padding-x text-center">
+                       <div class="cell large-8 medium-8 large-offset-2 medium-offset-2">
+                           <p class="thank_you_headline">Edit names:</p>
+                           <ul class="ul_names no-bullet">
+                           </ul>
+                       </div>
+                     </div>
+       </div>
+    <script src="{% static "names_api/js/vendor/jquery.js" %}"></script>
+    <script src="{% static "names_api/js/vendor/what-input.js" %}"></script>
+    <script src="{% static "names_api/js/vendor/foundation.js" %}"></script>
+    <script src="{% static "names_api/js/app.js" %}"></script>
+    <script src="{% static "names_api/js/my_ajax.js" %}"></script>
+  </body>
+</html>

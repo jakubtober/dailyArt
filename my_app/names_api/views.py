@@ -19,10 +19,20 @@ class CreateNamesInDatabase(View):
             'list_of_person_objects': list_of_person_objects,
         }
 
-        return render(request, 'home.html', ctx)
+        return HttpResponse('Looks like your database is set. :)')
 
     def post(self, request):
         pass
+
+
+class NamesEditView(View):
+    def get(self, request):
+        list_of_person_objects = Person.objects.all()
+
+        ctx = {
+            'list_of_person_objects': list_of_person_objects,
+        }
+        return render(request, 'home.html', ctx)
 
 
 class NamesListAPIView(ListAPIView) :
