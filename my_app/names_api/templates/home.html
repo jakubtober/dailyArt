@@ -29,24 +29,31 @@
         </div>
 
         <div class="section_donate">
-                   <div class="grid-x grid-margin-x text-center">
-                           <div class="cell medium-3 large-3"></div>
-                           <div class="cell medium-3 large-3"><textarea placeholder="Names:" rows=5></textarea></div>
-                           <div class="cell medium-3 large-3"><textarea placeholder="Last Names" rows=5></textarea></div>
-                           <div class="cell medium-2 large-2"><input class="button primary" type="submit" value="Add new names"></div>
-                   </div>
+                    <div class="grid-x grid-margin-x text-center">
+                            <div id="error_msg" class="cell medium-12 large-12"></div>
+                    </div>
+                    <form id="my_form" action="" method="POST">
+                        {% csrf_token %}
+                       <div class="grid-x grid-margin-x text-center">
+                               <div class="cell medium-3 large-3"></div>
+                               <div class="cell medium-3 large-3"><textarea id="textarea_names" form="my_form" name="new_names_to_add" placeholder="Names:" rows=5></textarea></div>
+                               <div class="cell medium-3 large-3"><textarea id ="textarea_last_names" form="my_form" name="new_last_names_to_add" placeholder="Last Names:" rows=5></textarea></div>
+                               <div class="cell medium-2 large-2"><input id="submit_button" class="button primary" type="submit" value="Add new people"></div>
+                       </div>
+                   </form>
 
         </div>
 
         <div class="section_names">
                    <div class="grid-x grid-margin-x grid-padding-x text-center">
                        <div class="cell large-8 medium-8 large-offset-2 medium-offset-2">
-                           <p class="thank_you_headline">Edit names:</p>
-                           <ul class="ul_names no-bullet">
+                           <p class="thank_you_headline">Delete names:</p>
+                           <ul id="list-of-people" class="ul_names no-bullet">
                            </ul>
                        </div>
                      </div>
        </div>
+
     <script src="{% static "names_api/js/vendor/jquery.js" %}"></script>
     <script src="{% static "names_api/js/vendor/what-input.js" %}"></script>
     <script src="{% static "names_api/js/vendor/foundation.js" %}"></script>

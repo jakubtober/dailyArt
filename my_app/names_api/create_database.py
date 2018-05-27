@@ -1,4 +1,5 @@
 import os
+from uuid import uuid4
 from names_api.models import Person
 
 def fill_database():
@@ -15,6 +16,7 @@ def fill_database():
 
     for person_id in names_dict:
         Person.objects.create(
+            unique_id=uuid4(),
             name=names_dict[person_id]['name'],
             last_name=names_dict[person_id]['last_name']
         )

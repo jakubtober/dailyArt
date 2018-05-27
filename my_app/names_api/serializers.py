@@ -5,6 +5,7 @@ class NamesSerializer(ModelSerializer):
     class Meta:
         model = Person
         fields = [
+            'unique_id',
             'name',
             'last_name',
         ]

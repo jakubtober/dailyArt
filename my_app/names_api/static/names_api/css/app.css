@@ -3,6 +3,10 @@ body {
 	font-weight: 400;
 }
 
+textarea {
+	resize: none;
+}
+
 .grid-container {
 	background-color: #eee;
 	max-width: 2000px;

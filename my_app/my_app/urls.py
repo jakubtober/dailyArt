@@ -19,11 +19,11 @@ from names_api.views import (
     CreateNamesInDatabase,
     NamesListAPIView,
     PersonDetailAPIView,
-    NamesEditView
+    HomeView,
 )
 
 urlpatterns = [
-    url(r'^$', NamesEditView.as_view(), name='home'),
+    url(r'^$', HomeView.as_view(), name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^names_list/$', NamesListAPIView.as_view(), name='names-list'),
     url(r'^names_list/(?P<pk>\d+)/$', PersonDetailAPIView.as_view(), name='detail-view'),
